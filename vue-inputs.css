@@ -1,0 +1,27 @@
+.slider input[type=number] {
+  width: 9ch;
+  text-align: right;
+}
+.slider.error:not(.coerced) {
+  background: #fcc;
+}
+.slider.error .message {
+  color: red;
+}
+.slider.coerced .message {
+  color: orange;
+}
+
+.slider-grid {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 0.5ch 1ch;
+}
+.slider-grid .slider {
+  display: grid;
+  grid-column: span 3;
+  grid-template-columns: subgrid;
+}
+.slider-grid .slider .message {
+  grid-column: span 3;
+}
